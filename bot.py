@@ -29,6 +29,8 @@ mentions = "[гиперсодомит](tg://user?id=nkognit0), [мегагей](
 
 # Handle incoming messages
 async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None:
+    if update.message is None or update.message.text is None:
+        return
     message = update.message.text.lower()  # Get the text of the incoming message in lowercase
     for keyword in keywords:
         if keyword in message:
