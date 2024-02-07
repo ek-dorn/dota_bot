@@ -4,6 +4,7 @@ from os import environ
 from sys import stdout
 from telegram import Update
 
+from telegram.constants import ParseMode
 from telegram.ext import Application, ContextTypes, MessageHandler
 from telegram.ext.filters import ALL
 
@@ -28,11 +29,11 @@ async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None
     message = update.message.text.lower()  # Get the text of the incoming message in lowercase
     for keyword in keywords:
         if keyword in message:
-            await update.message.reply_text(f'<a href="dolbaeb.com">гиперсодомит</a> <a href="dolbaeb.com">мегагей</a> <a href="dolbaeb.com">ультрапидор</a> <a href="dolbaeb.com">кибергомик</a>')
+            await update.message.reply_text(f"{keyword} [@nkognit0](гиперсодомит) [@madmaniako](мегагей), [@pseusys](ультрапидор), [@bunnynobugs](кибергомик)", parse_mode=ParseMode.MARKDOWN_V2)
             return
 
 
-def main():
+def main() -> None:
     application = Application.builder().token(token).build()
     application.add_handler(MessageHandler(ALL, keyword_response))
     application.run_polling(allowed_updates=Update.ALL_TYPES)
