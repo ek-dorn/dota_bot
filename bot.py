@@ -24,7 +24,7 @@ keywords = ["dota", "дота", "дотка", "доту", "дотку"]
 token = environ["TELEGRAM_BOT_TOKEN"]
 
 # Mentions string
-mentions = "[гиперсодомит](tg://user?id=nkognit0), [мегагей](tg://user?id=madmaniako), [ультрапидор](tg://user?id=pseusys), [кибергомик](tg://user?id=bunnynobugs)"
+mentions = "[гиперсодомит](tg://user?id=129026381), [мегагей](tg://user?id=274528988), [ультрапидор](tg://user?id=125631977), [кибергомик](tg://user?id=89097615)"
 
 
 # Handle incoming messages
@@ -34,7 +34,7 @@ async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None
     message = update.message.text.lower()  # Get the text of the incoming message in lowercase
     for keyword in keywords:
         if keyword in message:
-            await update.message.reply_text(f"{keyword} {mentions}", parse_mode=ParseMode.MARKDOWN)
+            await update.message.reply_text(f"{keyword} {mentions}", parse_mode=ParseMode.MARKDOWN_V2)
             return
 
 
