@@ -28,7 +28,7 @@ async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None
     message = update.message.text.lower()  # Get the text of the incoming message in lowercase
     for keyword in keywords:
         if keyword in message:
-            await update.message.reply_text(f"{keyword} [@nkognit0](гиперсодомит) [@madmaniako](мегагей), [@pseusys](ультрапидор), [@bunnynobugs](кибергомик)")
+            await update.message.reply_text(f"<a href="dolbaeb.com">гиперсодомит</a> <a href="dolbaeb.com">мегагей</a> <a href="dolbaeb.com">ультрапидор</a> <a href="dolbaeb.com">кибергомик</a>")
             return
 
 
