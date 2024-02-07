@@ -32,11 +32,11 @@ async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None
             return
 
 
-async def main():
+def main():
     application = Application.builder().token(token).build()
     application.add_handler(MessageHandler(ALL, keyword_response))
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 
 if __name__ == "__main__":
-    run(main())
+    main()
