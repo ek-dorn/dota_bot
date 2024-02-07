@@ -18,13 +18,13 @@ logger.addHandler(handler)
 logger.setLevel(INFO)
 
 # Keywords
-keywords = ["dota", "дота", "дотка", "доту", "дотку"]
+keywords = ["dota", "дота", "дотка", "доту", "дотку", "дотан", "го катку", "каточку", "каточка", "дис", "дискорд", "дискорде", "катать", "играть", "поиграть"]
 
 # Token
 token = environ["TELEGRAM_BOT_TOKEN"]
 
 # Mentions string
-mentions = "[гиперсодомит](tg://user?id=129026381), [мегагей](tg://user?id=274528988), [ультрапидор](tg://user?id=125631977), [кибергомик](tg://user?id=89097615)"
+mentions = "[гей](tg://user?id=274528988), [пидор](tg://user?id=129026381), [гомик](tg://user?id=469730736), [глиномес](tg://user?id=125631977) и [дырявый](tg://user?id=89097615)"
 
 
 # Handle incoming messages
@@ -34,7 +34,7 @@ async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None
     message = update.message.text.lower()  # Get the text of the incoming message in lowercase
     for keyword in keywords:
         if keyword in message:
-            await update.message.reply_text(f"{keyword}: {mentions}", parse_mode=ParseMode.MARKDOWN_V2)
+            await update.message.reply_text(f"Заходят как-то {mentions} в таверну. А бармен у них и спрашивает: «А мидера у вас тоже два?»", parse_mode=ParseMode.MARKDOWN_V2)
             return
 
 
