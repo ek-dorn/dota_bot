@@ -25,5 +25,5 @@ Dota game pinging bot for telegram
 4. Run the bot:
 
    ```shell
-   export TELEGRAM_BOT_TOKEN=[YOUR_TELEGRAM_BOT] && python3 bot.py
+   export TELEGRAM_BOT_TOKEN=<YOUR_TELEGRAM_BOT> && python3 bot.py
    ```
