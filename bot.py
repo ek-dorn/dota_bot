@@ -34,7 +34,7 @@ async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None
     message = update.message.text.lower()  # Get the text of the incoming message in lowercase
     for keyword in keywords:
         if keyword in message:
-            await update.message.reply_text(f"{keyword} {mentions}", parse_mode=ParseMode.MARKDOWN_V2)
+            await update.message.reply_text(f"{keyword}: {mentions}", parse_mode=ParseMode.MARKDOWN_V2)
             return
 
 
