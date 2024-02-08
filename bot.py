@@ -43,7 +43,7 @@ reply5 = f"Гороскоп на {format1}: \n \n**♑** [Козерогов](tg
 
 import random
 replies = [reply1, reply2, reply3, reply4, reply5]
-random_string = random.choice(replies)
+random_string = random.choices(replies)
 
 # Handle incoming messages
 async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None:
