@@ -43,7 +43,6 @@ reply5 = f"Гороскоп на {format1}: \n \n**♑** [Козерогов](tg
 
 import random
 replies = [reply1, reply2, reply3, reply4, reply5]
-random_string = random.choice(replies)
 
 # Handle incoming messages
 async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None:
@@ -52,7 +51,7 @@ async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None
     message = update.message.text.lower()  # Get the text of the incoming message in lowercase
     for keyword in keywords:
         if keyword in message:
-            await update.message.reply_text(random_string, parse_mode=ParseMode.MARKDOWN)
+            await update.message.reply_text(random.choice(replies), parse_mode=ParseMode.MARKDOWN)
             return
 
 
