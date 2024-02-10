@@ -20,8 +20,7 @@ logger.setLevel(INFO)
 
 
 
-# Get the current date
-current_date = date.today()
+
 
 # Format: DD/MM/YYYY
 format1 = current_date.strftime("%d/%m/%Y")
@@ -49,6 +48,7 @@ async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None
     if update.message is None or update.message.text is None:
         return
     message = update.message.text.lower()  # Get the text of the incoming message in lowercase
+    current_date = date.today() # Get the current date
     for keyword in keywords:
         if keyword in message:
             await update.message.reply_text(random.choice(replies), parse_mode=ParseMode.MARKDOWN)
