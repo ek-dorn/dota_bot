@@ -19,8 +19,8 @@ logger.addHandler(handler)
 logger.setLevel(INFO)
 
 
-
-
+# Get the current date
+current_date = date.today() 
 
 # Format: DD/MM/YYYY
 format1 = current_date.strftime("%d/%m/%Y")
@@ -45,10 +45,6 @@ replies = [reply1, reply2, reply3, reply4, reply5]
 
 # Handle incoming messages
 async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None:
-    from datetime import date
-    # Format: DD/MM/YYYY
-    format1 = current_date.strftime("%d/%m/%Y")
-    current_date = date.today() # Get the current date
     if update.message is None or update.message.text is None:
         return
     message = update.message.text.lower()  # Get the text of the incoming message in lowercase
