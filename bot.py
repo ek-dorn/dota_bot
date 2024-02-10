@@ -45,6 +45,9 @@ replies = [reply1, reply2, reply3, reply4, reply5]
 
 # Handle incoming messages
 async def keyword_response(update: Update, _: ContextTypes.DEFAULT_TYPE) -> None:
+    from datetime import date
+    # Format: DD/MM/YYYY
+    format1 = current_date.strftime("%d/%m/%Y")
     current_date = date.today() # Get the current date
     if update.message is None or update.message.text is None:
         return
