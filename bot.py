@@ -15,7 +15,7 @@ import random
 handler = StreamHandler(stdout)
 handler.setLevel(INFO)
 
-logger = getLogger(**name**)
+logger = getLogger(__name__)
 logger.addHandler(handler)
 logger.setLevel(INFO)
 
@@ -63,5 +63,5 @@ def main() -> None:
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 
-if </b>name</b> == "</b>main</b>":
+if __name__ == "__main__":
     main()
