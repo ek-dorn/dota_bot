@@ -15,7 +15,7 @@ import random
 handler = StreamHandler(stdout)
 handler.setLevel(INFO)
 
-logger = getLogger(</b>name</b>)
+logger = getLogger(**name**)
 logger.addHandler(handler)
 logger.setLevel(INFO)
 
