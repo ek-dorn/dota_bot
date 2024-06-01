@@ -27,3 +27,22 @@ Dota game pinging bot for telegram
    ```shell
    export TELEGRAM_BOT_TOKEN=<YOUR_TELEGRAM_BOT> && python3 bot.py
    ```
+
+## In order to refresh the bot in Bash console:
+
+1. Stop the process:
+
+   ```shell
+   Ctrl+C
+   ```
+
+2. Pull the new version:
+
+   ```shell
+   git pull
+   ```
+
+3. Run the bot:
+    ```shell
+    export TELEGRAM_BOT_TOKEN=<YOUR_TELEGRAM_BOT> && python3 bot.py
+    ```
